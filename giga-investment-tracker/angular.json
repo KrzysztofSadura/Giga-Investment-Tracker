@@ -28,7 +28,8 @@
                             "projects/giga-investment-tracker/src/assets"
                         ],
                         "styles": [
-                            "projects/giga-investment-tracker/src/styles.scss"
+                          "@angular/material/prebuilt-themes/pink-bluegrey.css",
+                          "projects/giga-investment-tracker/src/styles.scss"
                         ],
                         "scripts": []
                     },
@@ -88,7 +89,8 @@
                             "projects/giga-investment-tracker/src/assets"
                         ],
                         "styles": [
-                            "projects/giga-investment-tracker/src/styles.scss"
+                          "@angular/material/prebuilt-themes/pink-bluegrey.css",
+                          "projects/giga-investment-tracker/src/styles.scss"
                         ],
                         "scripts": []
                     }
