@@ -1,8 +1,15 @@
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+:root {
+	--color-primary-light: #c2185b;
+	--color-primary-dark: #c2185b66;
+	--color-secondary-light: #b0bec51a;
+	--color-secondary-dark: #303030;
 }
