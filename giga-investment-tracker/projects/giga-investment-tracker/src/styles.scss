@@ -5,6 +5,10 @@ body {
 body {
 	margin: 0;
 	font-family: Roboto, 'Helvetica Neue', sans-serif;
+	background-color: var(--color-primary-light);
+	display: grid;
+	align-items: center;
+	justify-content: center;
 }
 
 :root {
@@ -12,4 +16,5 @@ body {
 	--color-primary-dark: #c2185b66;
 	--color-secondary-light: #b0bec51a;
 	--color-secondary-dark: #303030;
+	--white: #fff;
 }

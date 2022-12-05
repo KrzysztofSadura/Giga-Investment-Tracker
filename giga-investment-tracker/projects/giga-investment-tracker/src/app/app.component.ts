@@ -1,12 +1,12 @@
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { Component } from '@angular/core';
+import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 
 @Component({
 	selector: 'app-root',
 	standalone: true,
-	templateUrl: './app.component.html',
+	template: `<app-main-layout></app-main-layout>`,
 	styleUrls: ['./app.component.scss'],
-	imports: [DashboardComponent],
+	imports: [MainLayoutComponent],
 })
 export class AppComponent {
 	title = 'giga-investment-tracker';

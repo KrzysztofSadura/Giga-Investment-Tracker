@@ -1,0 +1,9 @@
+.main-layout {
+	background-color: var(--white);
+	width: 90vw;
+	height: 95vh;
+	border-radius: 3px;
+	display: grid;
+	grid-template-rows: 10% 90%;
+	box-shadow: 4px 8px 20px 0px rgb(34, 34, 39);
+}
