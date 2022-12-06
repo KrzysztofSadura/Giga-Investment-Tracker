@@ -1,7 +1,26 @@
 <div class="navbar">
+	<mat-icon class="icon" color="primary"> bar_chart</mat-icon>
 	<div class="nav-buttons">
-		<button mat-button>TEST A</button>
-		<button mat-button>TEST B</button>
-		<button mat-button>TEST C</button>
+		<button mat-button>DASHBOARD</button>
+		<button mat-button [matMenuTriggerFor]="menu">TRANSACTIONS</button>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item>
+				<mat-icon>note_add</mat-icon> Add Transaction
+			</button>
+			<button mat-menu-item>
+				<mat-icon>edit</mat-icon>
+				Edit Transaction
+			</button>
+			<button mat-menu-item>
+				<mat-icon>delete</mat-icon>Delete Transaction
+			</button>
+		</mat-menu>
+		<button mat-button>PORTFOLIO</button>
+		<button mat-button>PREDICTIONS</button>
+		<button mat-button>HISTORY</button>
+	</div>
+	<div class="auth-buttons">
+		<button mat-button>SIGN IN</button>
+		<button color="primary" mat-button>SIGN UP</button>
 	</div>
 </div>
