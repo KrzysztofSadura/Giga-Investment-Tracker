@@ -1,7 +1,9 @@
 <div class="navbar">
 	<mat-icon class="icon" color="primary"> bar_chart</mat-icon>
 	<div class="nav-buttons">
-		<button mat-button>DASHBOARD</button>
+		<button mat-button routerLink="/home" routerLinkActive="active-button">
+			OVERVIEW
+		</button>
 		<button mat-button [matMenuTriggerFor]="menu">TRANSACTIONS</button>
 		<mat-menu #menu="matMenu">
 			<button mat-menu-item>
@@ -15,9 +17,19 @@
 				<mat-icon>delete</mat-icon>Delete Transaction
 			</button>
 		</mat-menu>
-		<button mat-button>PORTFOLIO</button>
-		<button mat-button>PREDICTIONS</button>
-		<button mat-button>HISTORY</button>
+		<button mat-button routerLink="/portfolio" routerLinkActive="active-button">
+			PORTFOLIO
+		</button>
+		<button
+			mat-button
+			routerLink="/predictions"
+			routerLinkActive="active-button"
+		>
+			PREDICTIONS
+		</button>
+		<button mat-button routerLink="/history" routerLinkActive="active-button">
+			HISTORY
+		</button>
 	</div>
 	<div class="auth-buttons">
 		<button mat-button>SIGN IN</button>

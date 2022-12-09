@@ -18,3 +18,8 @@
 .icon {
 	transform: scale(2);
 }
+
+.active-button {
+	color: var(--color-primary-light) !important;
+	border-bottom: 2px solid var(--color-primary-light);
+}
