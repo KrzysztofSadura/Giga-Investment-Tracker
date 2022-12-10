@@ -4,6 +4,7 @@ import { TransactionsComponent } from './features/transactions/transactions.comp
 import { PortfolioComponent } from './features/portfolio/portfolio.component';
 import { OverviewComponent } from './features/overview/overview.component';
 import { Routes } from '@angular/router';
+import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
 
 export const APP_ROUTES: Routes = [
 	{
@@ -30,5 +31,9 @@ export const APP_ROUTES: Routes = [
 	{
 		path: 'history',
 		component: HistoryComponent,
+	},
+	{
+		path: '**',
+		component: PageNotFoundComponent,
 	},
 ];
