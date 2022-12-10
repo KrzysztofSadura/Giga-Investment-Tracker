@@ -3,6 +3,7 @@ import { AppComponent } from './app/app.component';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import {
+	NoPreloading,
 	PreloadAllModules,
 	provideRouter,
 	withDebugTracing,
@@ -11,11 +12,7 @@ import {
 
 bootstrapApplication(AppComponent, {
 	providers: [
-		provideRouter(
-			APP_ROUTES,
-			withPreloading(PreloadAllModules),
-			withDebugTracing()
-		),
+		provideRouter(APP_ROUTES, withPreloading(NoPreloading), withDebugTracing()),
 		provideAnimations(),
 	],
 });

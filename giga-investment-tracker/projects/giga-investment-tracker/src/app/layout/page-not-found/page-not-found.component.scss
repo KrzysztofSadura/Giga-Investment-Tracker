@@ -17,18 +17,25 @@
 		box-shadow: 4px 8px 20px 0px rgb(34, 34, 39);
 		border-radius: 3px;
 		display: flex;
+		flex-direction: row;
 		justify-content: center;
 		align-items: center;
+		gap: 2rem;
 
-		&__details {
-			color: var(--color-primary-light);
+		&__info {
 			text-align: center;
 		}
 
+		&__headline {
+			color: var(--color-primary-light);
+			padding: 0.5rem 0;
+			margin: 0;
+			font-weight: 400;
+			font-size: 2.5rem;
+		}
+
 		&__text {
-			font-weight: bold;
-			padding: 2rem;
-			font-size: 3rem;
+			padding: 1rem;
 		}
 	}
 }

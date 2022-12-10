@@ -14,11 +14,17 @@ export const APP_ROUTES: Routes = [
 	},
 	{
 		path: 'home',
-		component: OverviewComponent,
+		loadComponent: () =>
+			import('./features/overview/overview.component').then(
+				(m) => m.OverviewComponent
+			),
 	},
 	{
 		path: 'portfolio',
-		component: PortfolioComponent,
+		loadComponent: () =>
+			import('./features/portfolio/portfolio.component').then(
+				(m) => m.PortfolioComponent
+			),
 	},
 	{
 		path: 'transactions',
@@ -26,11 +32,17 @@ export const APP_ROUTES: Routes = [
 	},
 	{
 		path: 'predictions',
-		component: PredictionsComponent,
+		loadComponent: () =>
+			import('./features/predictions/predictions.component').then(
+				(m) => m.PredictionsComponent
+			),
 	},
 	{
 		path: 'history',
-		component: HistoryComponent,
+		loadComponent: () =>
+			import('./features/history/history.component').then(
+				(m) => m.HistoryComponent
+			),
 	},
 	{
 		path: '**',
