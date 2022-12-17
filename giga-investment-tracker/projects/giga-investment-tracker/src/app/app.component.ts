@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import * as PortfolioActions from './data/store/actions';
 
 @Component({
 	selector: 'app-root',
@@ -8,6 +10,10 @@ import { MainLayoutComponent } from './layout/main-layout/main-layout.component'
 	styleUrls: ['./app.component.scss'],
 	imports: [MainLayoutComponent],
 })
-export class AppComponent {
-	title = 'giga-investment-tracker';
+export class AppComponent implements OnInit {
+	private store = inject(Store);
+
+	ngOnInit(): void {
+		this.store.dispatch(PortfolioActions.getPortfolio());
+	}
 }
