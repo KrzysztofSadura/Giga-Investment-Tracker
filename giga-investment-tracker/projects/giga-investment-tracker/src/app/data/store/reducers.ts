@@ -1,14 +1,24 @@
 import { createReducer, on } from '@ngrx/store';
-import { PortfolioState } from '../types/portfolio-state.interface';
-import * as PortfolioActions from './actions';
+import * as TransactionsActions from './actions';
 
-export const initialState: PortfolioState = {
+import { TransactionsState } from '../types/transactions-state.interface';
+export const initialState: TransactionsState = {
 	isLoading: false,
-	portfolio: [],
+	transactions: [],
 	error: null,
 };
 
-export const portfolioReducer = createReducer(
+export const transactionsReducer = createReducer(
 	initialState,
-	on(PortfolioActions.getPortfolio, (state) => ({ ...state, isLoading: true }))
+	on(TransactionsActions.getTransactions, (state) => ({ ...state, isLoading: true })),
+	on(TransactionsActions.getTransactionsSuccess, (state, action) => ({
+		...state,
+		isLoading: false,
+		transactions: action.transactions,
+	})),
+	on(TransactionsActions.getTransactionsFailure, (state, action) => ({
+		...state,
+		isLoading: false,
+		error: action.error,
+	}))
 );

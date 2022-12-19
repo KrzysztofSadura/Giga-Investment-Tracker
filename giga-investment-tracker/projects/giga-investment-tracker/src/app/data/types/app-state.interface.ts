@@ -1,5 +1,5 @@
-import { PortfolioState } from './portfolio-state.interface';
+import { TransactionsState } from './transactions-state.interface';
 
 export interface AppState {
-	portfolio: PortfolioState;
+	transactions: TransactionsState;
 }

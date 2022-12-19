@@ -12,7 +12,9 @@ import { NoPreloading, provideRouter, withPreloading } from '@angular/router';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 
-import { portfolioReducer } from './app/data/store/reducers';
+import { transactionsReducer } from './app/data/store/reducers';
+import { provideEffects } from '@ngrx/effects';
+import { TransactionsEffects } from './app/data/store/effects';
 
 bootstrapApplication(AppComponent, {
 	providers: [
@@ -20,7 +22,8 @@ bootstrapApplication(AppComponent, {
 		provideHttpClient(),
 		provideRouter(APP_ROUTES, withPreloading(NoPreloading)),
 		provideAnimations(),
-		provideStore({ portfolio: portfolioReducer }),
+		provideStore({ transactions: transactionsReducer }),
+		provideEffects([TransactionsEffects]),
 		provideStoreDevtools({
 			maxAge: 25,
 			autoPause: true,

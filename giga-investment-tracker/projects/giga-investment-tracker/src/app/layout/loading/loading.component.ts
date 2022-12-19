@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -23,7 +23,10 @@ import {
 	styleUrls: ['./loading.component.scss'],
 })
 export class LoadingComponent implements OnInit {
-	constructor(public loadingService: LoadingService, private router: Router) {}
+	public loadingService = inject(LoadingService);
+	private router = inject(Router);
+
+	constructor() {}
 
 	public ngOnInit(): void {
 		this.router.events.subscribe((event) => {
@@ -32,10 +35,7 @@ export class LoadingComponent implements OnInit {
 	}
 
 	private manageLoading = (event: Event) => {
-		if (
-			event instanceof NavigationStart ||
-			event instanceof RouteConfigLoadStart
-		) {
+		if (event instanceof NavigationStart || event instanceof RouteConfigLoadStart) {
 			this.loadingService.loadingOn();
 		} else if (
 			event instanceof NavigationEnd ||

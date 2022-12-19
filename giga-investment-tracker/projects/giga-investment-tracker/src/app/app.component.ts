@@ -14,6 +14,6 @@ export class AppComponent implements OnInit {
 	private store = inject(Store);
 
 	ngOnInit(): void {
-		this.store.dispatch(PortfolioActions.getPortfolio());
+		this.store.dispatch(PortfolioActions.getTransactions());
 	}
 }
