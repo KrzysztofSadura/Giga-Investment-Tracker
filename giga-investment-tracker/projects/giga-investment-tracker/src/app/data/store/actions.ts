@@ -1,4 +1,4 @@
-import { Transaction } from '../transaction.interface';
+import { Transaction } from '../types/transaction.interface';
 import { createAction, props } from '@ngrx/store';
 
 export const getTransactions = createAction('[Transactions] Get Transactions');
