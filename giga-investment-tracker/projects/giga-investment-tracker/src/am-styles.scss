@@ -5,3 +5,18 @@
 .mat-icon.mat-primary {
 	color: var(--color-primary-light);
 }
+
+td:not(:first-child),
+th {
+	text-align: center !important;
+}
+
+.mat-mdc-table {
+	background-color: white !important;
+}
+
+.mdc-data-table__cell,
+.mdc-data-table__header-cell {
+	border-bottom-color: var(--black);
+	color: var(--black);
+}

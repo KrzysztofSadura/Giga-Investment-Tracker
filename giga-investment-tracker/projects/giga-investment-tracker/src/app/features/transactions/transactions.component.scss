@@ -1,0 +1,17 @@
+.transactions {
+	height: 100%;
+	display: grid;
+	grid-template-rows: 10% 80%;
+	grid-template-columns: 90%;
+	justify-content: center;
+
+	&__buttons {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+	}
+
+	&__table {
+		overflow-y: auto;
+	}
+}

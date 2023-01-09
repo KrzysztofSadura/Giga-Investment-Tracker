@@ -24,7 +24,10 @@
 						"polyfills": ["zone.js"],
 						"tsConfig": "projects/giga-investment-tracker/tsconfig.app.json",
 						"inlineStyleLanguage": "scss",
-						"assets": ["projects/giga-investment-tracker/src/assets"],
+						"assets": [
+							"projects/giga-investment-tracker/src/favicon.png",
+							"projects/giga-investment-tracker/src/assets"
+						],
 						"styles": [
 							"@angular/material/prebuilt-themes/pink-bluegrey.css",
 							"projects/giga-investment-tracker/src/styles.scss"
@@ -82,7 +85,10 @@
 						"polyfills": ["zone.js", "zone.js/testing"],
 						"tsConfig": "projects/giga-investment-tracker/tsconfig.spec.json",
 						"inlineStyleLanguage": "scss",
-						"assets": ["projects/giga-investment-tracker/src/assets"],
+						"assets": [
+							"projects/giga-investment-tracker/src/favicon.png",
+							"projects/giga-investment-tracker/src/assets"
+						],
 						"styles": [
 							"@angular/material/prebuilt-themes/pink-bluegrey.css",
 							"projects/giga-investment-tracker/src/styles.scss"

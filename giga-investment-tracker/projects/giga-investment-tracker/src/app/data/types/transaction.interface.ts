@@ -1,15 +1,15 @@
 export interface Transaction {
 	id: number;
-	account: string;
-	date: string;
 	name: string;
-	assetType: string;
 	ticker: string;
+	date: string;
+	account: string;
+	assetType: string;
 	amount: number;
-	currency: string;
-	exchangeRate: number;
 	price: number;
-	totalPrice: number;
 	transactionCost: number;
 	transactionType: string;
+	currency: string;
+	exchangeRate: number;
+	totalPrice: number;
 }
