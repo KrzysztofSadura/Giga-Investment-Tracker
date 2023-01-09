@@ -27,7 +27,7 @@
 
 				<ng-container matColumnDef="assetType">
 					<th mat-header-cell *matHeaderCellDef>Asset Type</th>
-					<td mat-cell *matCellDef="let element">{{ element.assetType }}</td>
+					<td mat-cell *matCellDef="let element">{{ element.assetType | uppercase }}</td>
 				</ng-container>
 
 				<ng-container matColumnDef="amount">
@@ -42,12 +42,12 @@
 
 				<ng-container matColumnDef="transactionCost">
 					<th mat-header-cell *matHeaderCellDef>Transaction Cost</th>
-					<td mat-cell *matCellDef="let element">{{ element.transactionCost }}</td>
+					<td mat-cell *matCellDef="let element">{{ element.transactionCost | currency }}</td>
 				</ng-container>
 
 				<ng-container matColumnDef="transactionType">
 					<th mat-header-cell *matHeaderCellDef>Transaction Type</th>
-					<td mat-cell *matCellDef="let element">{{ element.transactionType }}</td>
+					<td mat-cell *matCellDef="let element">{{ element.transactionType | uppercase }}</td>
 				</ng-container>
 
 				<ng-container matColumnDef="currency">
@@ -57,12 +57,12 @@
 
 				<ng-container matColumnDef="exchangeRate">
 					<th mat-header-cell *matHeaderCellDef>Exchange Rate</th>
-					<td mat-cell *matCellDef="let element">{{ element.exchangeRate }}</td>
+					<td mat-cell *matCellDef="let element">{{ element.exchangeRate | number : '1.2-2' }}</td>
 				</ng-container>
 
 				<ng-container matColumnDef="totalPrice">
 					<th mat-header-cell *matHeaderCellDef>Total Price</th>
-					<td mat-cell *matCellDef="let element">{{ element.totalPrice }}</td>
+					<td mat-cell *matCellDef="let element">{{ element.totalPrice | currency }}</td>
 				</ng-container>
 
 				<tr mat-header-row *matHeaderRowDef="this.displayedColumns"></tr>
